@@ -222,6 +222,7 @@ public class AddWorkoutActivity extends AppCompatActivity {
             editTextSet.setText(String.format(""+set));
             editTextDescription.setText(description);
             break;
+
         }
     }
 
