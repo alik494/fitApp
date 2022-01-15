@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "274822617466",
+    "project_id": "fitapp-7341c",
+    "storage_bucket": "fitapp-7341c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274822617466:android:7e966f4617e911735f5ec3",
+        "android_client_info": {
+          "package_name": "com.sumin.notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274822617466-2d7emda9cirh20ejsddb3e33340g76u3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeFUKqn2JkZZqLsA6Gz8oxH2I3_R2VSvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274822617466-2d7emda9cirh20ejsddb3e33340g76u3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

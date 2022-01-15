@@ -1,7 +1,5 @@
 package com.sumin.notes;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.PrimaryKey;
 
 public class Exercise {
 
