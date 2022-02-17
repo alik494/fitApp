@@ -1,5 +1,6 @@
 package com.sumin.notes;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,8 +51,11 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
         workoutViewHolder.textViewWeight.setText(""+workout.getWeight());
         workoutViewHolder.textViewSet.setText(String.format("%s",workout.getSet()));
         workoutViewHolder.textViewDescription.setText(workout.getDescription());
-
-
+        if (workout.getOdd()) {
+            workoutViewHolder.textViewTitle.setBackgroundColor(Color.parseColor("#f5deb3"));
+        } else {
+            workoutViewHolder.textViewTitle.setBackgroundColor(Color.parseColor("#fff0f5"));
+        }
     }
 
     @Override
