@@ -1,4 +1,4 @@
-package com.sumin.notes;
+package com.alik.notes;
 
 import android.app.Application;
 import android.os.AsyncTask;

@@ -1,11 +1,11 @@
-package com.sumin.notes;
+package com.alik.notes;
 
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Handler;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -17,7 +17,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Arrays;
+import com.alik.notes.deep_exercise.Exercise;
+import com.alik.notes.deep_exercise.ExerciseActivity;
+import com.alik.notes.deep_exercise.ExerciseAdapter;
+import com.alik.notes.deep_exercise.ExerciseDBHelper;
+import com.alik.notes.middle_workout.WorkoutDBHelper;
+
 import java.util.ArrayList;
 
 public class AddWorkoutActivity extends AppCompatActivity {

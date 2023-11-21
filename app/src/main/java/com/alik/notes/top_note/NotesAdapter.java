@@ -1,4 +1,4 @@
-package com.sumin.notes;
+package com.alik.notes.top_note;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.alik.notes.Note;
+import com.alik.notes.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +23,9 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
         this.notes = notes;
     }
 
-    interface OnNoteClickListener {
+    public interface OnNoteClickListener {
         void onNoteClick(String title);
+
         void onLongClick(int position);
     }
 

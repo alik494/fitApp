@@ -1,4 +1,4 @@
-package com.sumin.notes;
+package com.alik.notes.middle_workout;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -9,9 +9,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alik.notes.R;
+
 import java.util.ArrayList;
 
-public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>  {
+public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder> {
 
     private ArrayList<Workout> workouts;
     private OnWorkoutClickListener onWorkoutClickListener;
@@ -22,12 +24,14 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
 
     public interface ItemTouchHelperAdapter {
         void onItemMove(int fromPosition, int toPosition);
+
         void onItemDismiss(int position);
     }
 
-    interface OnWorkoutClickListener{
+    interface OnWorkoutClickListener {
         void onWorkoutClick(int position);
-        void onLongWorkoutClick  (int position);
+
+        void onLongWorkoutClick(int position);
     }
 
     public void setOnWorkoutClickListener(OnWorkoutClickListener onWorkoutClickListener) {
@@ -37,7 +41,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
     @NonNull
     @Override
     public WorkoutViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.workout_item,viewGroup,false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.workout_item, viewGroup, false);
         return new WorkoutViewHolder(view);
     }
 
@@ -45,11 +49,11 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
     public void onBindViewHolder(@NonNull WorkoutViewHolder workoutViewHolder, int i)
     //принимает эл. массива и устанавливает
     {
-        Workout workout=workouts.get(i);
+        Workout workout = workouts.get(i);
         workoutViewHolder.textViewTitle.setText(workout.getTitle());
-        workoutViewHolder.textViewReps.setText(""+workout.getReps());
-        workoutViewHolder.textViewWeight.setText(""+workout.getWeight());
-        workoutViewHolder.textViewSet.setText(String.format("%s",workout.getSet()));
+        workoutViewHolder.textViewReps.setText("" + workout.getReps());
+        workoutViewHolder.textViewWeight.setText("" + workout.getWeight());
+        workoutViewHolder.textViewSet.setText(String.format("%s", workout.getSet()));
         workoutViewHolder.textViewDescription.setText(workout.getDescription());
         if (workout.getOdd()) {
             workoutViewHolder.textViewTitle.setBackgroundColor(Color.parseColor("#f5deb3"));
@@ -63,7 +67,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
         return workouts.size();
     }
 
-    class WorkoutViewHolder extends RecyclerView.ViewHolder{
+    class WorkoutViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textViewTitle;
         private TextView textViewReps;
@@ -73,15 +77,15 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
 
         public WorkoutViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewTitle=itemView.findViewById(R.id.textViewTitleExAct);
-            textViewDescription=itemView.findViewById(R.id.textViewDescriptionExAct);
-            textViewSet=itemView.findViewById(R.id.textViewSet);
-            textViewWeight=itemView.findViewById(R.id.textViewWeight);
-            textViewReps=itemView.findViewById(R.id.textViewReps);
+            textViewTitle = itemView.findViewById(R.id.textViewTitleExAct);
+            textViewDescription = itemView.findViewById(R.id.textViewDescriptionExAct);
+            textViewSet = itemView.findViewById(R.id.textViewSet);
+            textViewWeight = itemView.findViewById(R.id.textViewWeight);
+            textViewReps = itemView.findViewById(R.id.textViewReps);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (onWorkoutClickListener != null){
+                    if (onWorkoutClickListener != null) {
                         onWorkoutClickListener.onWorkoutClick(workouts.get(getAdapterPosition()).getId());
                     }
                 }
@@ -89,7 +93,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    if (onWorkoutClickListener != null){
+                    if (onWorkoutClickListener != null) {
                         onWorkoutClickListener.onLongWorkoutClick(getAdapterPosition());
                     }
                     return true;

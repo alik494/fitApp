@@ -1,5 +1,4 @@
-package com.sumin.notes;
-
+package com.alik.notes.middle_workout;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -18,15 +17,15 @@ public class Workout {
     private Boolean odd;
     private String day;
 
-    public Workout(int id, String title, String weight, String reps, int set, String description,boolean odd, String day) {
+    public Workout(int id, String title, String weight, String reps, int set, String description, boolean odd, String day) {
         this._id = id;
         this.title = title;
         this.weight = weight;
         this.reps = reps;
         this.set = set;
         this.description = description;
-        this.odd=odd;
-        this.day=day;
+        this.odd = odd;
+        this.day = day;
     }
 
     public String getDay() {

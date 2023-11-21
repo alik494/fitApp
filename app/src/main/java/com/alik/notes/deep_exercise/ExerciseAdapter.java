@@ -1,4 +1,4 @@
-package com.sumin.notes;
+package com.alik.notes.deep_exercise;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.lang.reflect.Array;
+import com.alik.notes.R;
+
 import java.util.ArrayList;
 
 public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder> {
@@ -20,7 +21,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
         this.exercises = exercises;
     }
 
-    interface OnExerciseClickListener  {
+    interface OnExerciseClickListener {
         void onExerciseClick(int position);
     }
 
@@ -30,16 +31,17 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
     private TextView textViewDescriptionExAct;
     private TextView textViewTitleExAct;
+
     @NonNull
     @Override
     public ExerciseViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.exercise_item,viewGroup,false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.exercise_item, viewGroup, false);
         return new ExerciseViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ExerciseViewHolder exerciseViewHolder, int i) {
-        Exercise exercise= exercises.get(i);
+        Exercise exercise = exercises.get(i);
         exerciseViewHolder.textViewTitleExAct.setText(exercise.getTitle());
         exerciseViewHolder.textViewDescriptionExAct.setText(exercise.getDescription());
     }
@@ -56,13 +58,13 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
         public ExerciseViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewTitleExAct=itemView.findViewById(R.id.textViewTitleExAct);
-            textViewDescriptionExAct=itemView.findViewById(R.id.textViewDescriptionExAct);
+            textViewTitleExAct = itemView.findViewById(R.id.textViewTitleExAct);
+            textViewDescriptionExAct = itemView.findViewById(R.id.textViewDescriptionExAct);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (onExerciseClickListener!=null) {
-                            onExerciseClickListener.onExerciseClick(getAdapterPosition());
+                    if (onExerciseClickListener != null) {
+                        onExerciseClickListener.onExerciseClick(getAdapterPosition());
                     }
                 }
             });

@@ -4,7 +4,7 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.sumin.notes"
+        applicationId "com.alik.notes"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1

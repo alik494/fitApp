@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sumin.notes">
+    package="com.alik.notes">
 
     <application
         android:allowBackup="true"
@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activity_faq"></activity>
-        <activity android:name=".ExerciseActivity" />
+        <activity android:name=".deep_exercise.ExerciseActivity" />
         <activity android:name=".AddWorkoutActivity" />
-        <activity android:name=".TrainDayActivity" />
+        <activity android:name=".middle_workout.TrainDayActivity" />
         <activity android:name=".AddNoteActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

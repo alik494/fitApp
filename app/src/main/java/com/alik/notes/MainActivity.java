@@ -1,24 +1,22 @@
-package com.sumin.notes;
+package com.alik.notes;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
-import androidx.recyclerview.widget.ItemTouchHelper;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.alik.notes.middle_workout.TrainDayActivity;
+import com.alik.notes.top_note.NotesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickTrainDay(String title){
-        Intent intent=new Intent(this,TrainDayActivity.class);
-        intent.putExtra("idDay",title);
+    public void onClickTrainDay(String title) {
+        Intent intent = new Intent(this, TrainDayActivity.class);
+        intent.putExtra("idDay", title);
         startActivity(intent);
     }
 
@@ -96,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickFAQ(View view) {
-        Intent intent2=new Intent(this,Activity_faq.class);
+        Intent intent2 = new Intent(this, Activity_faq.class);
         startActivity(intent2);
     }
 }

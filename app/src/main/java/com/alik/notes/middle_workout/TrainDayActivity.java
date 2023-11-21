@@ -1,14 +1,10 @@
-package com.sumin.notes;
+package com.alik.notes.middle_workout;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -16,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.alik.notes.AddWorkoutActivity;
+import com.alik.notes.R;
 
 import java.util.ArrayList;
 
@@ -47,7 +46,7 @@ public class TrainDayActivity extends AppCompatActivity {
         workoutAdapter = new WorkoutAdapter(workouts);//workoutsFromDB
         recyclerViewWorkouts.setLayoutManager(new GridLayoutManager(this, 5, GridLayoutManager.HORIZONTAL, false));
         recyclerViewWorkouts.setAdapter(workoutAdapter);
-        //устанавливаем разметку по горизонтале или как
+        //устанавливаем разметку по горизонтале или
         workoutAdapter.setOnWorkoutClickListener(new WorkoutAdapter.OnWorkoutClickListener() {
             @Override
             public void onWorkoutClick(int position) {

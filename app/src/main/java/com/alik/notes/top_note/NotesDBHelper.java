@@ -1,8 +1,10 @@
-package com.sumin.notes;
+package com.alik.notes.top_note;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.alik.notes.NotesContract;
 
 public class NotesDBHelper extends SQLiteOpenHelper {
 

@@ -1,9 +1,7 @@
-package com.sumin.notes;
+package com.alik.notes;
 
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -52,7 +50,7 @@ public class AddNoteActivity extends AppCompatActivity {
             viewModel.insertNote(note);
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-        }else {
+        } else {
             Toast.makeText(this, R.string.warning_fill_fileds, Toast.LENGTH_SHORT).show();
         }
     }

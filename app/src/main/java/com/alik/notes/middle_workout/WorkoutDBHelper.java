@@ -1,4 +1,4 @@
-package com.sumin.notes;
+package com.alik.notes.middle_workout;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

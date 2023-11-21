@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".TrainDayActivity"
+    tools:context="com.alik.notes.middle_workout.TrainDayActivity"
     tools:showIn="@layout/activity_train_day"
     android:padding="1dp">
 

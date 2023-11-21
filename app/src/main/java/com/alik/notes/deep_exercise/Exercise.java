@@ -1,5 +1,4 @@
-package com.sumin.notes;
-
+package com.alik.notes.deep_exercise;
 
 public class Exercise {
 
@@ -7,15 +6,15 @@ public class Exercise {
     private String title;
     private String description;
 
-    public Exercise(int id,String title, String description) {
-        this.id=id;
+    public Exercise(int id, String title, String description) {
+        this.id = id;
         this.title = title;
         this.description = description;
     }
 
     public int getId() {
-       return id;
-   }
+        return id;
+    }
 
     public String getTitle() {
         return title;
